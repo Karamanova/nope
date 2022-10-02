@@ -1,0 +1,365 @@
+:root {
+    --primary-color: #ffffff;
+    /*Цвет #212121 для ссылок вверху слева, кнопок, названий разделов и заглавий*/
+    --title-color: #212121;
+    --first-background-color: #2f303a;
+    /*Цвет #757575 для контактов вверху справа и описательной части текста*/
+    --contacts-list-color: #757575;
+    --accent-color: #2196f3;
+    --secondary-color: #000000;
+    --footer-contact-color: rgba(255, 255, 255, 0.6);
+    --border-solid-color: #eeeeee;
+    --border-bottom-color: #ececec;
+    --about-team-background-color: #f5f4fa;
+    --hero-button-background-color: #188CE8;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--title-color);
+}
+.list {
+    list-style: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+    margin: 0;
+}
+ul {
+    padding: 0;
+}
+.section {
+    padding: 94px 0;
+}
+.container {
+    width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+/*Шапка*/
+.page-header {
+    border-bottom: 1px solid var(--border-bottom-color);
+}
+.header-container {
+display: flex;
+align-items: center;
+}
+/*Логотип*/
+.header-logo {
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-decoration: none; 
+}
+.logo-web {
+color: var(--accent-color);
+}
+.logo-studio {
+color: var(--secondary-color);
+}
+/*Коробочка для ссылок*/
+.navigation {
+    margin-left: 93px;
+}
+/*Коробочка для ссылок слева*/
+.navigation-list {
+display: flex;
+align-items: center;
+}
+.navigation-list .link-current{
+color: var(--accent-color);
+}
+/*Ссылки в шапке*/
+.navigation-link a{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    color: var(--title-color);
+    text-decoration: none;
+    display: block;
+    padding: 32px 0;
+}
+.navigation-list .navigation-link:not(:last-child) {
+    margin-right: 50px;
+}
+/*Коробочка для контактов справа*/
+.contacts-list {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.contacts-link:not(:last-child) {
+    margin-right: 50px;
+}
+/*Контакты в шапке*/
+.contacts-link a{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    color: var(--contacts-list-color);
+    text-decoration: none;
+}
+/*Настройка hover и focus*/
+.navigation-list a:hover,
+.navigation-list a:focus,
+.contact-detail a:hover,
+.contact-detail a:focus,
+.contacts-list a:hover,
+.contacts-list a:focus
+{
+    color: var(--accent-color);
+}
+.hero-btn:hover,
+.hero-btn:focus {
+    background-color: var(--accent-color);
+    color: var(--primary-color)
+}
+.filters-btn:hover,
+.filters-btn:focus {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+/*Коробочка "Герой"*/
+.hero {
+    background-color: var(--first-background-color);
+    padding: 200px 0 280px;
+    text-align: center;
+}
+/*Название героя*/
+.hero-text {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin: 0 auto 30px;
+    width: 696px;
+}
+/*Кнопка заказа в разделе герой*/
+.hero-btn {
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    letter-spacing: 0.06em;
+    padding: 10px 32px;
+    background-color: var(--hero-button-background-color);
+    color: var(--primary-color);
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+/*Коробочка "Правила работы"*/
+/*Скрыть название "Правила работы" в разделе студии и "Фильтры" в разделе портфолио*/
+.visually-hidden {
+  visibility: hidden;  
+}
+/*Коробочка для правила*/
+.testimonials {
+    margin-left: 215px;
+    margin-right: 215px;
+    padding: 94px 0;
+}
+.testimonials-scroll {
+    display: flex;
+    align-items: center;
+    width: 1170px;
+}
+.testionials.item {
+        width: 270px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: var(--contacts-list-color);
+        align-items: center;
+}
+.testimonials-item:not(:last-child) {
+    margin-right: 30px;
+}
+/*Название правил*/
+.testimonials-text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--title-color);
+    margin: 0 0 10px 0;
+}
+/*Описание правил*/
+.testimonials-description {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--contacts-list-color);
+}
+/*Коробочка "Чем мы занимаемся"*/
+.about-projects {
+    padding: 47px 0 94px 0;
+}
+/*Название "Чем мы занимаемся""*/
+.about-sections {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-color);
+    margin-bottom: 50px;
+}
+.about-scroll {
+    display: flex;
+}
+.about-item {
+    align-items: center;
+}
+.about-item:not(:last-child) {
+    margin-right: 30px;
+}
+/*Коробочка "Наша команда"*/
+.about-team {
+background-color: var(--about-team-background-color);
+}
+.team-item {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--primary-color);
+}
+.team-item:not(:last-child) {
+    margin-right: 30px;
+}
+/*Имена сотрудников*/
+.about-names {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-color);
+    margin-bottom: 10px;
+}
+/*Должности сотрудников*/
+.about-jobs {
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--contacts-list-color);
+}
+/*Футер*/
+.page-footer {
+background-color: var(--first-background-color);
+padding: 60px 0;
+}
+.footer-logo {
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+}
+.footer-web {
+    color: var(--accent-color);
+}
+
+.footer-studio {
+    color: var(--primary-color);
+}
+/*Адрес в футере*/
+.contact-information {
+    font-style: normal;
+    margin-top: 20px;
+}
+.contact-detail {
+    display: block;
+}
+.contact-address a{
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-style: normal;
+}
+/*Ссыдки в футере*/
+.contact-link a{
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: var(--footer-contact-color);
+    text-decoration: none;
+    font-style: normal;
+}
+.contact-address + .contact-link + .contact-link {
+    margin-bottom: 9px;
+}
+/*Страница портфолио*/
+/*Секция с кнопками фильтра*/
+.filters-list {
+display: flex;
+justify-content: center;
+margin-bottom: 34px;
+}
+/*Кнопки фильтра*/
+.filters-btn {
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-color);
+    background-color: var(--about-team-background-color);
+    padding: 6px 22px;
+    border-radius: 4px;
+    border-color: transparent;
+}
+.filters-item:not(:last-child) {
+    margin-right: 8px;
+}
+/*Секция с перечнем проектов*/
+.project {
+    display: flex;
+    flex-wrap: wrap;
+}
+/*Коробочка для проектов*/
+.project-list {
+    background: var(--primary-color);
+    box-sizing: border-box;
+}
+.project-description {
+    padding: 20px 24px;
+    border-top: none;
+    border: 1px solid var(--border-solid-color);
+}
+/*Название проекта*/
+.project-name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--title-color);
+}
+/*Тип проекта*/
+.project-type {
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    color: var(--contacts-list-color);
+    margin-top: 4px;
+}
